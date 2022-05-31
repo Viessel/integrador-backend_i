@@ -1,0 +1,27 @@
+#+BEGIN_SRC plantuml
+@startuml
+!pragma layout smetana
+class Paciente {
+  - int id
+  - String apellido
+  - String nombre
+  - String domicilio
+  - String DNI
+  - Date fechaAlta
+}
+class Odontologo {
+  - int id
+  - String apellido
+  - String nombre
+  - String matricula
+}
+class Turno {
+  - int id
+  - Date fechaTurno
+}
+
+Turno *-- Paciente
+Turno *-- Odontologo
+@enduml
+#+END_SRC
+
